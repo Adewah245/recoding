@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func countfile(s string) map[string]int {
 	m := make(map[string]int)
@@ -8,4 +11,10 @@ func countfile(s string) map[string]int {
 		m[w]++
 	}
 	return m
+}
+func main() {
+	r := count("God is Able to take care of our needs")
+	for _, i := range r {
+		fmt.Println(i, r)
+	}
 }
